@@ -20,5 +20,8 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('', views.index, name="index")
+    path('', views.index, name="index"),
+    path('create/', views.create_blog, name="create_blog"),
+    path('login/', views.UserLoginView.as_view(), name="login"),
+    path('register/', views.UserCreateView.as_view(), name="register"),
 ]
