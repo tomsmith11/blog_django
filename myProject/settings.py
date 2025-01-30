@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-0up8_fcj72kd0!4pip$kmk_ijm4y=y$q_^(y&r(3^x*ov373s9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost']
 
@@ -100,6 +100,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = 'myApp.User'
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/

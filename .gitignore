@@ -140,3 +140,4 @@ GitHub.sublime-settings
 /myProject/__pycache__/settings.cpython-312.pyc
 /myProject/__pycache__/urls.cpython-312.pyc
 /myProject/__pycache__/wsgi.cpython-312.pyc
+*.sqlite3

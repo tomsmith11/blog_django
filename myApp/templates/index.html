@@ -1,6 +1,14 @@
 <html>
   <head></head>
   <body>
+    {% if user.is_authenticatedd %}
+    <a href="{% url 'create_blog' %}">Create Blog</a>
+    <p>logged in as: {{ user.email }}</p>
+    {% else %}
     <p>index.html, index.views!</p>
+    <a href="{% url 'login' %}">Log in</a>
+    <a href="{% url 'register' %}">Register</a>
+
+    {% endif %}
   </body>
 </html>
