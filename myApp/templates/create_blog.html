@@ -1,26 +1,21 @@
-<!-- myApp/templates/create_blog.html -->
-<html>
-  <head>
-    <title>Create Blog</title>
-  </head>
-  <body>
-    <h1>Create a New Blog Post</h1>
-    <form method="post">
-      {% csrf_token %}
-      <label for="title">Title:</label>
-      <input type="text" id="title" name="title" required /><br /><br />
+{% extends 'base.html' %}
+{% block content %}
+<h1>Create a New Blog Post</h1>
+  <form method="post">
+    {% csrf_token %}
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" required /><br /><br />
 
-      <label for="content">Content:</label><br />
-      <textarea
+    <label for="content">Content:</label><br />
+    <textarea
         id="content"
         name="content"
         rows="10"
         cols="30"
         required
-      ></textarea
-      ><br /><br />
+    ></textarea
+    ><br /><br />
 
-      <button type="submit">Submit</button>
-    </form>
-  </body>
-</html>
+    <button type="submit">Submit</button>
+  </form>
+{% endblock %}

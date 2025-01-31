@@ -1,0 +1,22 @@
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style-type: none;
+
+  li {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: lightgrey;
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+}
+
+header {
+  height: 70px;
+}

@@ -1,0 +1,32 @@
+{% load static %} 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}"/>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          {% if user.is_authenticated %}
+          <li><p>logged in as: {{ user.email }}</p></li>
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li><a href="{% url 'create_blog' %}">Create Blog</a></li>
+          <li><a href="{% url 'signout' %}">Logout</a></li>
+          {% else %}
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li><a href="{% url 'create_blog' %}">Create Blog</a></li>
+          <li><a href="{% url 'register' %}">Register</a></li>
+          <li><a href="{% url 'login' %}">Log in</a></li>
+          <li><a href="{% url 'signout' %}">Logout</a></li>
+          {% endif %}
+
+        </ul>
+      </nav>
+    </header>
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+  </body>
+</html>
